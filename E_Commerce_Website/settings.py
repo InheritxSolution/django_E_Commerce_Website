@@ -170,60 +170,9 @@ LOGOUT_REDIRECT_URL = "userauths:sign-in"
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
-STRIPE_PUBLISHABLE_KEY = 'pk_test_51PQSoQBmaBkv9bws5njjZJHUKeEgHHjrp0gjkRQoAAUw4T2YC0hv0kIFLwPPA85aaGtCKwAbmFlZW2eTMUk7DyP300Tu04D1dE'
-STRIPE_SECRET_KEY = 'sk_test_51PQSoQBmaBkv9bwsl2kiZB7Ur4e8S84wd5Rye6NT3RSHosAp8PflXQjA1k2jHJX0YjossoecTmyDDxJD4X7rElTp00KJufI9Ot'
-STRIPE_WEBHOOK_SECRET_KEY = 'whsec_8568c361de1fc043e27a5ab1f98f7d18bd9bc4a7879ea5a4c9b336dfb76eb42c'
-
-
-# ACCOUNT_LOGOUT_REDIRECT_URL = "userauths:sign-in"
-# ACCOUNT_SIGNUP_REDIRECT_URL = "userauths:sign-in"
-
-# ACCOUNT_ADAPTER = 'userauths.adapters.LoginAdapter'
-
-
-# JAZZMIN_SETTINGS = {
-
-#     # "site_header": "You order, we deliver",
-#     "site_brand": "Sarthak Shop",
-#     # "site_logo": "images/logo.jpg",
-#     "copyright": "Sarthak-Shop.com",
-#     # "order_with_respect_to": ["core", 'userauths', "transactions" , 'addon', 'blog']  
-# }
-
-
-
-# JAZZMIN_UI_TWEAKS = {
-#     "navbar_small_text": False,
-#     "footer_small_text": False,
-#     "body_small_text": True,
-#     "brand_small_text": False,
-#     "brand_colour": "navbar-indigo",
-#     "accent": "accent-olive",
-#     "navbar": "navbar-indigo navbar-dark",
-#     "no_navbar_border": False,
-#     "navbar_fixed": False,
-#     "layout_boxed": False,
-#     "footer_fixed": False,
-#     "sidebar_fixed": False,
-#     "sidebar": "sidebar-dark-indigo",
-#     "sidebar_nav_small_text": False,
-#     "sidebar_disable_expand": False,
-#     "sidebar_nav_child_indent": False,
-#     "sidebar_nav_compact_style": False,
-#     "sidebar_nav_legacy_style": False,
-#     "sidebar_nav_flat_style": False,
-#     "theme": "cyborg",
-#     "dark_mode_theme": "cyborg",
-#     "button_classes": {
-#         "primary": "btn-primary",
-#         "secondary": "btn-secondary",
-#         "info": "btn-info",
-#         "warning": "btn-warning",
-#         "danger": "btn-danger",
-#         "success": "btn-success"
-#     }
-# }
-
+STRIPE_PUBLISHABLE_KEY = os.getenv("STRIPE_PUBLISHABLE_KEY")
+STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
+STRIPE_WEBHOOK_SECRET_KEY = os.getenv("STRIPE_WEBHOOK_SECRET_KEY")
 
 
 
